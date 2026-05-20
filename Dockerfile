@@ -17,15 +17,10 @@ COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 6. Copier le reste du code
-COPY . /app
+COPY . /app/
 
 # 7. Exposer le port configuré
 EXPOSE 10000
 
 # 8. Commande de démarrage de l'API FastAPI
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000"]
-
-EXPOSE 10000
-
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000"]
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000"]
