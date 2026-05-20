@@ -24,4 +24,3 @@ EXPOSE 10000
 
 # 8. Commande de démarrage de l'API FastAPI
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000"]
-vicorn", "main:app", "--host", "0.0.0.0", "--port", "10000"]
