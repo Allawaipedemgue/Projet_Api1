@@ -11,13 +11,13 @@ RUN apt-get update && \
 WORKDIR /app
 
 # 4. Copier le fichier des dépendances
-COPY requirements.txt /app/
+COPY requirements.txt .
 
 # 5. Installer les bibliothèques Python
-RUN pip install --no-cache-dir -r /app/requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # 6. Copier le reste du code
-COPY . /app/
+COPY . .
 
 # 7. Exposer le port configuré
 EXPOSE 10000
