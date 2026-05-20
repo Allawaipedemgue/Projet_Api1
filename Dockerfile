@@ -9,15 +9,18 @@ RUN apt-get update && \
 
 # 3. Définir le dossier de travail
 WORKDIR /app
+
 # 4. Copier le fichier des dépendances
 COPY requirements.txt /app/
+
+# 5. Installer les bibliothèques Python
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 5. Copier le reste du code
+# 6. Copier le reste du code
 COPY . /app/
 
-# 6. Exposer le port configuré
+# 7. Exposer le port configuré
 EXPOSE 10000
 
-# 7. Commande de démarrage de l'API FastAPI
+# 8. Commande de démarrage de l'API FastAPI
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000"]
