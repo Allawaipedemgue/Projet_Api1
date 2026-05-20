@@ -12,7 +12,6 @@ WORKDIR /app
 
 # 4. Copier le fichier des dépendances
 COPY requirements.txt /app/
-requirements.tx
 
 # 5. Installer les bibliothèques Python
 RUN pip install --no-cache-dir -r requirements.txt
