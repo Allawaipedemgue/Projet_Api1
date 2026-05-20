@@ -14,7 +14,7 @@ WORKDIR /app
 COPY requirements.txt /app/
 
 # 5. Installer les bibliothèques Python
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r /app/requirements.txt
 
 # 6. Copier le reste du code
 COPY . /app/
